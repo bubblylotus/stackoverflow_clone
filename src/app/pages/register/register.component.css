@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.register-container{
+    padding: 1em;
+}
+mat-card{
+    margin: 2em;
+    width: 25%;
+}
+mat-card-content{
+    display: flex;
+    flex-direction: column;    
+    padding:0;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-content: center;
+}
+.register-container{
+    text-align: center;
+}

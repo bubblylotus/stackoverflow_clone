@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="logo"></div>
+       <mat-card>
+        <mat-card-content>
+            <form [formGroup] = "loginForm">
+             <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input 
+            matInput
+            formControlName = "email">
+            <mat-error *ngIf = "loginForm.controls['email'].invalid">
+                {{loginForm.controls['email'].hasError('required')? 'Email is required': 'Enter a valid email'}}
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input 
+            type="password" 
+            matInput
+            formControlName = "password">
+          </mat-form-field>
+          <mat-error *ngIf = "loginForm.controls['password'].invalid">
+              {{loginForm.controls['password'].hasError('required')? 'Password is required': 'Password must be at least 6 characters long'}}
+          </mat-error>
+          <span></span>
+          <button 
+          mat-flat-button 
+          color="primary"
+          (click)= "login()"
+          [disabled] = !loginForm.valid>Log in</button>
+          </form>
+          {{loginForm.value | json}}
+          </mat-card-content>
+      </mat-card>
+    <p class="login-container">Don't have an account? <a routerLink = "/register" class="register-button">Sign up</a></p>          
+
+</div>
+
