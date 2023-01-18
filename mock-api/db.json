@@ -1,0 +1,65 @@
+{
+  "users": [
+    {
+      "username": "khfkah",
+      "email": "test@test.com",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "username": "test2",
+      "email": "test2@test.com",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "username": "test3",
+      "email": "test3@test.com",
+      "password": "123456",
+      "id": 3
+    }
+  ],
+  "questions": [
+    {
+      "username": "khfkah",
+      "question": {
+        "username": "",
+        "question": "",
+        "solutions": [
+          {
+            "username": "",
+            "answer": "",
+            "upvotes": 0,
+            "downvotes": 0
+          }
+        ]
+      },
+      "solutions": [],
+      "id": 1
+    },
+    {
+      "username": "khfkah",
+      "question": "sss",
+      "solutions": [],
+      "id": 2
+    },
+    {
+      "username": "khfkah",
+      "question": "123456",
+      "solutions": [],
+      "id": 3
+    },
+    {
+      "username": "khfkah",
+      "question": "another one",
+      "solutions": [],
+      "id": 4
+    },
+    {
+      "username": "khfkah",
+      "question": "another one too",
+      "solutions": [],
+      "id": 5
+    }
+  ]
+}

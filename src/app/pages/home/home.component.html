@@ -1,0 +1,40 @@
+<div class="container">
+
+    <div class="content-wrapper">
+        
+            <mat-form-field appearance = "fill">
+                <textarea 
+                [(ngModel)] = "question"
+                matInput cdkTextareaAutosize cdkAutosizeMinRows = "5" placeholder = "Ask a question..."></textarea>
+            </mat-form-field>
+            <div class="post-button">
+                <button mat-raised-button color = "primary"
+                (click) = "post()"
+                [disabled] = "question.trim() == '' "
+                >Post</button>
+            </div>
+             
+    <!-- <mat-form-field>
+        <ngx-mat-file-input formControlName="basicfile" placeholder="Basic Input" ></ngx-mat-file-input>
+        <mat-icon matSuffix>folder</mat-icon>
+      </mat-form-field> -->
+            
+
+        
+    
+        <mat-card 
+        *ngFor = "let question of questionList"
+        class="question-card">
+            <mat-card-header>
+              <mat-card-title>{{question.username}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>
+                {{question.question}}
+              </p>
+            </mat-card-content>
+        </mat-card>
+        </div>
+        </div>
+
+
