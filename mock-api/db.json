@@ -40,7 +40,40 @@
     {
       "username": "khfkah",
       "question": "sss",
-      "solutions": [],
+      "solutions": [
+        {
+          "username": "khfkah",
+          "answer": "test solution",
+          "upvotes": [
+            1
+          ],
+          "downvotes": []
+        },
+        {
+          "username": "khfkah",
+          "answer": "another one",
+          "upvotes": [],
+          "downvotes": [
+            1
+          ]
+        },
+        {
+          "username": "khfkah",
+          "answer": "something",
+          "upvotes": [],
+          "downvotes": [
+            1
+          ]
+        },
+        {
+          "username": "khfkah",
+          "answer": "test update",
+          "upvotes": [],
+          "downvotes": [
+            1
+          ]
+        }
+      ],
       "id": 2
     },
     {

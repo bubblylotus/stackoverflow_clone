@@ -56,6 +56,7 @@ question: string = "";
     localStorage.clear();
     this.router.navigate(['/login']);
   }
+  
 }
 let question = {
   username: '', 

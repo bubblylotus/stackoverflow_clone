@@ -24,6 +24,7 @@
     
         <mat-card 
         *ngFor = "let question of questionList"
+        [routerLink] = "'/view-solutions/' + question.id"
         class="question-card">
             <mat-card-header>
               <mat-card-title>{{question.username}}</mat-card-title>

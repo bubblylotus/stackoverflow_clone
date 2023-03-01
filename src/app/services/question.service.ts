@@ -6,11 +6,11 @@ import { Injectable } from '@angular/core';
 })
 export class QuestionService {
 
-  constructor(private httpClinet: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
 public postQestion(questionObj: any){
   return new Promise((resolve, reject) => {
-    this.httpClinet.post("http://localhost:3000/questions", questionObj).subscribe(
+    this.httpClient.post("http://localhost:3000/questions", questionObj).subscribe(
       (res) => {
         resolve(res)
       }, 
@@ -23,7 +23,7 @@ public postQestion(questionObj: any){
 public fetchQuestions(){
   return new Promise(
     (resolve, reject) => {
-      this.httpClinet.get("http://localhost:3000/questions").subscribe(
+      this.httpClient.get("http://localhost:3000/questions").subscribe(
         (res) => {
           resolve(res);
         },
@@ -33,5 +33,30 @@ public fetchQuestions(){
       );
     }
   );
+}
+public fetchQuestionById(id: string){
+  return new Promise(
+    (resolve, reject) => {
+      this.httpClient.get("http://localhost:3000/questions/" + id).subscribe(
+        (res) => {
+          resolve(res);
+        }, 
+        (err) => {
+          reject(err);
+        }
+      );
+    }
+  );
+}
+public updateQuestion(newObj: any){
+  return new Promise((resolve, reject) => {
+    this.httpClient.put("http://localhost:3000/questions/"+newObj.id, newObj).subscribe(
+      (res) => {
+        resolve(res);
+      }, 
+      (err)=>{
+        reject(err);
+      });
+  });
 }
 }
